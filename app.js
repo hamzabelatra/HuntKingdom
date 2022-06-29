@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://127.0.0.1:27017/HuntKingdom")
   .then(()=>console.log("database connected"))
