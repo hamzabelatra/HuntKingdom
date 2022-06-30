@@ -10,7 +10,7 @@ var Produit= new Schema({
     prix: Number,		
     description: String,	
     quantiteProd: Number,	
-	isActive: Boolean,
+	  isActive: Boolean,
     categorieProduit: {
 
       type: Schema.Types.ObjectId,
@@ -21,7 +21,13 @@ var Produit= new Schema({
 
       type: Schema.Types.ObjectId,
       ref: "commentaire"  
-    }
+    },
+
+    panier: [{
+
+      type: Schema.Types.ObjectId,
+      ref: "panier"  
+    }]
 
 
 });

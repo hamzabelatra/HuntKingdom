@@ -35,6 +35,11 @@ var Membre= new Schema({
     facture: [{
             type: Schema.Types.ObjectId,
             ref: "facture"
+    }],
+
+   commande: [{
+            type: Schema.Types.ObjectId,
+            ref: "commande"
     }]
 
 });

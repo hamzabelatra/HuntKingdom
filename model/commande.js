@@ -17,7 +17,18 @@ var Commande= new Schema({
     facture: {
             type: Schema.Types.ObjectId,
             ref: "facture"
+    },
+
+    membre: {
+            type: Schema.Types.ObjectId,
+            ref: "membre"
+    },
+
+    panier: {
+            type: Schema.Types.ObjectId,
+            ref: "panier"
     }
+
 });
 
 module.exports = mongoose.model('commande',Commande);
