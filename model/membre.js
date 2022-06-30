@@ -12,9 +12,8 @@ var Membre= new Schema({
     adresse : String,
     numTel : String,
     password : String,
-    isActive :Boolean,
     dateCre:{type:Date,default:Date.now},
-
+    isActive :Boolean
 });
 
 module.exports = mongoose.model('membre',Membre);

@@ -4,7 +4,9 @@ var Schema = mongoose.Schema;
 
 var CategorieProduit= new Schema({
 
-
+    idCat: String,		
+    libelle: String,		
+    isActive: Boolean	
 
 });
 

@@ -4,7 +4,9 @@ var Schema = mongoose.Schema;
 
 var Facture= new Schema({
 
-    dateRecp: Date
+    dateRecp: Date,
+    isActive: Boolean
+
 });
 
 module.exports = mongoose.model('facture',Facture);
