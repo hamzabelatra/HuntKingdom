@@ -1,0 +1,99 @@
+
+Pour Rahma : 
+
+git clone https://github.com/Adnen-Developer/HuntKingdom.git
+
+git checkout --track  remotes/origin/rahma
+
+git checkout rahma
+
+
+****Après avoir travaillé et fait les modifications sur des fichiers : 
+
+
+git add .
+
+git commit -m "écrivez n'importe quel message"
+
+git push origin rahma
+
+------------------------------------
+
+Pour Hamza : 
+
+git clone https://github.com/Adnen-Developer/HuntKingdom.git
+
+git checkout --track    remotes/origin/hamza
+
+git checkout hamza
+
+
+****Après avoir travaillé et fait les modifications sur des fichiers : 
+
+
+git add .
+
+git commit -m "écrivez n'importe quel message"
+
+git push origin hamza
+
+-------------------------------------
+
+Pour Hichem : 
+
+git clone https://github.com/Adnen-Developer/HuntKingdom.git
+
+git checkout --track  remotes/origin/hichem
+
+git checkout hichem
+
+
+****Après avoir travaillé et fait les modifications sur des fichiers : 
+
+
+git add .
+
+git commit -m "écrivez n'importe quel message"
+
+git push origin hichem
+
+--------------------------------
+
+Pour Marwen : 
+
+git clone https://github.com/Adnen-Developer/HuntKingdom.git
+
+git checkout --track remotes/origin/marwen
+
+git checkout marwen
+
+****Après avoir travaillé et fait les modifications sur des fichiers : 
+
+git add .
+
+git commit -m "écrivez n'importe quel message"
+
+git push origin marwen
+
+----------------------------------
+
+Pour Naoures : 
+
+git clone https://github.com/Adnen-Developer/HuntKingdom.git
+
+
+git checkout --track   remotes/origin/naoures
+
+git checkout naoures
+
+****Après avoir travaillé et fait les modifications sur des fichiers : 
+
+
+git add .
+
+git commit -m "écrivez n'importe quel message"
+
+git push origin naoures
+*************************************************************
+
+
