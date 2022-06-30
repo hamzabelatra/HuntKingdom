@@ -10,7 +10,14 @@ var Produit= new Schema({
     prix: Number,		
     description: String,	
     quantiteProd: Number,	
-	isActive: Boolean	
+	isActive: Boolean,
+    categorieProduit: {
+
+      type: Schema.Types.ObjectId,
+      ref: "categorieProduit"  
+    }
+
+
 });
 
 module.exports = mongoose.model('produit',Produit);

@@ -11,7 +11,12 @@ var EspeceAnimales= new Schema({
     image: String,		
     lieu: String,		
     periodeReprod: String,	
-    isActive: String
+    isActive: String,
+
+    categorieEspece: {
+            type: Schema.Types.ObjectId,
+            ref: "categorieEspece"
+    }
 });
 
 module.exports = mongoose.model('especeAnimales',EspeceAnimales);

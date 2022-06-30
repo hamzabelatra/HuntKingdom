@@ -6,7 +6,12 @@ var CategorieProduit= new Schema({
 
     idCat: String,		
     libelle: String,		
-    isActive: Boolean	
+    isActive: Boolean,
+    produits: [{
+
+      type: Schema.Types.ObjectId,
+      ref: "produit"  
+    }] 	
 
 });
 

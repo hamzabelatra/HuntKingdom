@@ -7,7 +7,8 @@ var Localisation= new Schema({
     Lieu: String,		
     lattitude: String,		
     longitude: String,
-    isActive: Boolean		
+    isActive: Boolean,
+    
 
 });
 

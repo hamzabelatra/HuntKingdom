@@ -6,7 +6,13 @@ var CategorieEspece= new Schema({
 
     libelle : String,
     description: String,
-    isActive :Boolean
+    isActive :Boolean,
+
+    especeAnimales: [{
+
+      type: Schema.Types.ObjectId,
+      ref: "especeAnimales"  
+    }] 
 
 });
 
