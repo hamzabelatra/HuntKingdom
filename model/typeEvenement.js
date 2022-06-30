@@ -9,7 +9,12 @@ var TypeEvenement= new Schema({
     nbrPartMax:	Number,		
     nbrPartMin:	Number,		
     isLimited:	Boolean,
-    isActive: Boolean	
+    isActive: Boolean,
+
+    evenement: [{
+            type: Schema.Types.ObjectId,
+            ref: "evenement"
+    }]
 
 });
 

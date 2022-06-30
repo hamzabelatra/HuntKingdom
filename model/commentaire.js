@@ -8,7 +8,20 @@ var Commentaire= new Schema({
     dateCom: {type:Date,default:Date.now},		
     image: String,			
     message: String,	
-    isActive: Boolean
+    isActive: Boolean,
+    produit: {
+
+      type: Schema.Types.ObjectId,
+      ref: "produit"  
+    },
+    membre: {
+
+      type: Schema.Types.ObjectId,
+      ref: "membre"  
+    }
+
+
+
 });
 
 module.exports = mongoose.model('commentaire',Commentaire);

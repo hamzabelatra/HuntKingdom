@@ -13,7 +13,13 @@ var Livraison= new Schema({
 
       type: Schema.Types.ObjectId,
       ref: "commande"  
-    }
+    },
+
+    livreur: [{
+
+      type: Schema.Types.ObjectId,
+      ref: "livreur"  
+    }]
 
 });
 

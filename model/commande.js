@@ -12,6 +12,11 @@ var Commande= new Schema({
 
       type: Schema.Types.ObjectId,
       ref: "livraison"  
+    },
+
+    facture: {
+            type: Schema.Types.ObjectId,
+            ref: "facture"
     }
 });
 

@@ -15,6 +15,12 @@ var Produit= new Schema({
 
       type: Schema.Types.ObjectId,
       ref: "categorieProduit"  
+    },
+
+    commentaire: {
+
+      type: Schema.Types.ObjectId,
+      ref: "commentaire"  
     }
 
 

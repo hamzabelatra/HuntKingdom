@@ -13,7 +13,30 @@ var Membre= new Schema({
     numTel : String,
     password : String,
     dateCre:{type:Date,default:Date.now},
-    isActive :Boolean
+    isActive :Boolean,
+
+    commentaire: [{
+
+      type: Schema.Types.ObjectId,
+      ref: "commentaire"  
+    }],
+    message: [{
+
+      type: Schema.Types.ObjectId,
+      ref: "message"  
+    }],
+
+
+    evenement: [{
+            type: Schema.Types.ObjectId,
+            ref: "evenement"
+    }],
+
+    facture: [{
+            type: Schema.Types.ObjectId,
+            ref: "facture"
+    }]
+
 });
 
 module.exports = mongoose.model('membre',Membre);

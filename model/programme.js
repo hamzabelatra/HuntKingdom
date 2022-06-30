@@ -11,7 +11,17 @@ var Programme= new Schema({
     dateFermeture: Date,		
     regle: String,		
     image: String,		
-    isActive: Boolean	
+    isActive: Boolean,
+
+    especeAnimales: [{
+            type: Schema.Types.ObjectId,
+            ref: "especeAnimales"
+    }],
+
+    localisation: {
+            type: Schema.Types.ObjectId,
+            ref: "localisation"
+    }
 
 });
 

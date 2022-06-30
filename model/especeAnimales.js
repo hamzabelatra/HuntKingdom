@@ -16,7 +16,13 @@ var EspeceAnimales= new Schema({
     categorieEspece: {
             type: Schema.Types.ObjectId,
             ref: "categorieEspece"
-    }
+    },
+
+    programme: [{
+            type: Schema.Types.ObjectId,
+            ref: "programme"
+    }]
+
 });
 
 module.exports = mongoose.model('especeAnimales',EspeceAnimales);
