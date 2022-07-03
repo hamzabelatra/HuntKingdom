@@ -7,20 +7,27 @@ var Facture= new Schema({
     dateRecp: Date,
     isActive: Boolean,
 
-    membre: {
+    commande: {
+        type: Schema.Types.ObjectId,
+        ref: "commande"
+    },
+    livreur: {
+
+        type: Schema.Types.ObjectId,
+        ref: "livreur"
+    }
+
+
+
+    /*    membre: {
             type: Schema.Types.ObjectId,
             ref: "membre"
     },
-    commande: {
-            type: Schema.Types.ObjectId,
-            ref: "commande"
-    },
 
-    livreur: {
+    */
 
-      type: Schema.Types.ObjectId,
-      ref: "livreur"  
-    }
+
+
 
 
 });

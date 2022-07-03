@@ -8,11 +8,6 @@ var CategorieEspece= new Schema({
     description: String,
     isActive :Boolean,
 
-    especeAnimales: [{
-
-      type: Schema.Types.ObjectId,
-      ref: "especeAnimales"  
-    }] 
 
 });
 

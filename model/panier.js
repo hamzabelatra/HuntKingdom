@@ -14,11 +14,11 @@ var Panier= new Schema({
             ref: "commande"
     },
 
-    produit: [{
+/*    produit: {
 
       type: Schema.Types.ObjectId,
       ref: "produit"  
-    }]
+    }*/
 
 
 });

@@ -8,11 +8,7 @@ var Localisation= new Schema({
     lattitude: String,		
     longitude: String,
     isActive: Boolean,
-    
-    programme: {
-            type: Schema.Types.ObjectId,
-            ref: "programme"
-    }
+
 
 });
 

@@ -9,17 +9,16 @@ const Livreur = extendSchema(membre, {
     dispo: {type: Boolean, required: true},
     phoisActive: {type: Boolean, required: true},
 
-    livraison: [{
+    /*
+    livraison: {
 
       type: Schema.Types.ObjectId,
       ref: "livraison"  
-    }],
+    }
 
-    facture: [{
+    */
 
-      type: Schema.Types.ObjectId,
-      ref: "facture"  
-    }]
+
   });
 
 

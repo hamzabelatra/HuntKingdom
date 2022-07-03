@@ -13,15 +13,17 @@ var Programme= new Schema({
     image: String,		
     isActive: Boolean,
 
-    especeAnimales: [{
-            type: Schema.Types.ObjectId,
-            ref: "especeAnimales"
-    }],
-
     localisation: {
             type: Schema.Types.ObjectId,
             ref: "localisation"
-    }
+    },
+/*
+    especeAnimales: {
+        type: Schema.Types.ObjectId,
+        ref: "especeAnimales"
+    },
+
+    */
 
 });
 

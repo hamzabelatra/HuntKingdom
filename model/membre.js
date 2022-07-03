@@ -15,32 +15,25 @@ var Membre= new Schema({
     dateCre:{type:Date,default:Date.now},
     isActive :Boolean,
 
-    commentaire: [{
-
-      type: Schema.Types.ObjectId,
-      ref: "commentaire"  
-    }],
-    message: [{
-
-      type: Schema.Types.ObjectId,
-      ref: "message"  
-    }],
 
 
-    evenement: [{
-            type: Schema.Types.ObjectId,
-            ref: "evenement"
-    }],
-
-    facture: [{
-            type: Schema.Types.ObjectId,
-            ref: "facture"
-    }],
-
-   commande: [{
+   commande: {
             type: Schema.Types.ObjectId,
             ref: "commande"
-    }]
+    },
+
+
+    facture: {
+        type: Schema.Types.ObjectId,
+        ref: "facture"
+    },
+
+/*    evenement: {
+        type: Schema.Types.ObjectId,
+        ref: "evenement"
+    }
+
+    */
 
 });
 

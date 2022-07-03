@@ -18,10 +18,10 @@ var EspeceAnimales= new Schema({
             ref: "categorieEspece"
     },
 
-    programme: [{
+/*    programme: {
             type: Schema.Types.ObjectId,
             ref: "programme"
-    }]
+    }*/
 
 });
 

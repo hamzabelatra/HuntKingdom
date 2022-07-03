@@ -11,10 +11,6 @@ var TypeEvenement= new Schema({
     isLimited:	Boolean,
     isActive: Boolean,
 
-    evenement: [{
-            type: Schema.Types.ObjectId,
-            ref: "evenement"
-    }]
 
 });
 

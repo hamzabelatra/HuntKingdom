@@ -22,15 +22,18 @@ var Evenement= new Schema({
             ref: "localisation"
     },
 
-    facture: [{
-            type: Schema.Types.ObjectId,
-            ref: "facture"
-    }],
 
-    admin: [{
+    admin: {
             type: Schema.Types.ObjectId,
             ref: "admin"
-    }]
+    },
+
+
+/*    membre: {
+        type: Schema.Types.ObjectId,
+        ref: "membre"
+    }*/
+
 
 });
 

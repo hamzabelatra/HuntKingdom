@@ -17,17 +17,18 @@ var Produit= new Schema({
       ref: "categorieProduit"  
     },
 
-//    commentaire: {
+    commentaire: {
 
-//      type: Schema.Types.ObjectId,
-//     ref: "commentaire"  
-//    },
+      type: Schema.Types.ObjectId,
+      ref: "commentaire"
+    },
 
-    panier: [{
+
+/*    panier: {
 
       type: Schema.Types.ObjectId,
       ref: "panier"  
-    }]
+    }*/
 
 
 },
