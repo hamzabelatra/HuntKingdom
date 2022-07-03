@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors  = require('cors');
 
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://127.0.0.1:27017/HuntKingdom")
@@ -12,9 +13,11 @@ mongoose.connect("mongodb://127.0.0.1:27017/HuntKingdom")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var facture = require('./routes/facture');
+var produitRouter = require('./routes/produit');
+var categoryProduitRouter = require('./routes/categorieProduit');
 
 var app = express();
-
+app.use(cors());
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -24,11 +27,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(express.static(path.join(__dirname, 'uploads')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/facture', facture);
-
+app.use('/produit', produitRouter);
+app.use('/categorieProduit', categoryProduitRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

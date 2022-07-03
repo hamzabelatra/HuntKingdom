@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 var Produit= new Schema({
 
     nomProd: String,		
-    dateAjout: {type:Date,default:Date.now},		
+    dateAjout: {type:Date,default:Date.now},	
     image: String,		
     prix: Number,		
     description: String,	
@@ -13,15 +13,15 @@ var Produit= new Schema({
 	  isActive: Boolean,
     categorieProduit: {
 
-      type: Schema.Types.ObjectId,
+      type: mongoose.Types.ObjectId,
       ref: "categorieProduit"  
     },
 
-    commentaire: {
+//    commentaire: {
 
-      type: Schema.Types.ObjectId,
-      ref: "commentaire"  
-    },
+//      type: Schema.Types.ObjectId,
+//     ref: "commentaire"  
+//    },
 
     panier: [{
 
@@ -30,6 +30,9 @@ var Produit= new Schema({
     }]
 
 
+},
+{
+  timestamps : true
 });
 
 module.exports = mongoose.model('produit',Produit);

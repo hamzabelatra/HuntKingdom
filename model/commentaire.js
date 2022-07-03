@@ -9,6 +9,7 @@ var Commentaire= new Schema({
     image: String,			
     message: String,	
     isActive: Boolean,
+    note : String, 
     produit: {
 
       type: Schema.Types.ObjectId,

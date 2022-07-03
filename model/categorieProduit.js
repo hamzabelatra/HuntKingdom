@@ -4,15 +4,13 @@ var Schema = mongoose.Schema;
 
 var CategorieProduit= new Schema({
 
-    idCat: String,		
+    //idCat: String,		
     libelle: String,		
-    isActive: Boolean,
-    produits: [{
+    isActive: Boolean,	
 
-      type: Schema.Types.ObjectId,
-      ref: "produit"  
-    }] 	
-
+},
+{
+  timestamps : true
 });
 
 module.exports = mongoose.model('categorieProduit',CategorieProduit);
