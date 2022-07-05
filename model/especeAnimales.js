@@ -3,7 +3,6 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var EspeceAnimales= new Schema({
-
     description: String,		
     isChassable: Boolean,		
     maniereProt: String,		
@@ -18,10 +17,12 @@ var EspeceAnimales= new Schema({
             ref: "categorieEspece"
     },
 
+/*
     programme: [{
             type: Schema.Types.ObjectId,
             ref: "programme"
     }]
+*/
 
 });
 
