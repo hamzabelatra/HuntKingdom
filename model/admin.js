@@ -1,19 +1,25 @@
 var mongoose = require('mongoose');
 const membre = require('./membre');
-const extendSchema = require('./mongoose-extend-schema');
+//const extendSchema = require('mongoose-extend-schema');
 
 var Schema = mongoose.Schema;
 
-const Admin = extendSchema(membre, {
-    firstname: {type: String, required: true},
-    lastname: {type: String, required: true},
-    phone: {type: String, required: true},
+const Admin = new Schema({
 
-    evenements: [{
+    nom : String,
+    prenom: String,
+    email: String,
+    dateNaiss: String,
+    image: String,
+    adresse : String,
+    numTel : String,
+    password : String,
+    dateCre : String ,
+    dateupdate : Date,  //{type:Date,default:Date.now},
+    isActive : Boolean,
+    role : String
 
-      type: Schema.Types.ObjectId,
-      ref: "evenement"  
-    }] 
-  });
+})
 
-module.exports = mongoose.model('admin',Admin);
+
+module.exports = mongoose.model('admin',Admin)
