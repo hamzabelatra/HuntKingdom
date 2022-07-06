@@ -43,13 +43,23 @@ router.get('/proximite', function(req, res) {
   });
 
 /* GET API data*/
-router.get('/weather', async (req,res)=>{
+router.get('/weather', async (req,res,next)=>{
+    try{
+        if(!process.env.RANDOMER_API_TOKEN)
+        {
+            throw new Error("you forgot to set the API key");
+        }
    var lng=parseFloat(req.query.lng);
    var lat =parseFloat(req.query.lat)
-const api_url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&appid=58a80b5addaf01f5751aad9d315d8dab`;
+   /*console.log('token',process.env.RANDOMER_API_TOKEN);*/
+const api_url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&appid=${process.env.RANDOMER_API_TOKEN}`;
     const fetch_response = await fetch(api_url);
     const json = await fetch_response.json();
-    res.json(json);
+    res.json(json);}
+    catch(err)
+    {
+        next(err);
+    }
 });
 
 /* Post   programme  . */ 
@@ -96,7 +106,7 @@ router.get('/:id', async(req, res) =>{
     console.log({ id });
     //res.redirect("/programme")
     res.json(p);
-    res.json("programme found")
+    
 }
 catch{res.status(404).send({error:"programme not found"})}
 });

@@ -1,10 +1,12 @@
+require('dotenv').config();
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors  = require('cors');
-
+const fetch = (...args) =>
+  import('node-fetch').then(({ default: fetch }) => fetch(...args));
 const mongoose = require("mongoose");
 mongoose.connect("mongodb://127.0.0.1:27017/HuntKingdom")
   .then(()=>console.log("database connected"))
@@ -13,10 +15,9 @@ mongoose.connect("mongodb://127.0.0.1:27017/HuntKingdom")
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var facture = require('./routes/facture');
-var produitRouter = require('./routes/produit');
+//var produitRouter = require('./routes/produit');
 var programmeRouter = require('./routes/programmeRoute');
 
-var categoryProduitRouter = require('./routes/categorieProduit');
 
 var app = express();
 app.use(cors());
@@ -33,8 +34,7 @@ app.use(express.static(path.join(__dirname, 'uploads')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/facture', facture);
-app.use('/produit', produitRouter);
-app.use('/categorieProduit', categoryProduitRouter);
+
 app.use('/programme', programmeRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
