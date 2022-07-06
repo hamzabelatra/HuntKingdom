@@ -16,6 +16,9 @@ var facture = require('./routes/facture');
 var produitRouter = require('./routes/produit');
 var categoryProduitRouter = require('./routes/categorieProduit');
 
+var evenementRouter = require('./routes/evenement');
+var typeEvenementRouter = require('./routes/typeEvenement');
+
 var app = express();
 app.use(cors());
 // view engine setup
@@ -33,6 +36,15 @@ app.use('/users', usersRouter);
 app.use('/facture', facture);
 app.use('/produit', produitRouter);
 app.use('/categorieProduit', categoryProduitRouter);
+
+
+///////////////////
+
+app.use('/evenement', evenementRouter);
+app.use('/typeEvenement', typeEvenementRouter);
+
+/////////////////
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
